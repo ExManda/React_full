@@ -31,8 +31,12 @@
 .Logo {
     height: 5rem;
     margin: 4rem;
+    transition: transform 0.3s ease;
+
 }
 
-.Logo:hover{
-    transform: scale(1.1);    
+.Logo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+
 }
