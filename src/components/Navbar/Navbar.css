@@ -1,21 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .nav-bar {
+    font-family: poppins;
     display: flex;
     justify-content: space-around;
-    background-color: cornsilk;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
     width: 100%;
-    height: 2rem;
+    height: 6rem;
     padding: 1rem;
 }
 
 .nav-bar-options {
+    font-family: poppins;
+    font-size: 14px;
     display: flex;
-    justify-content: space-around;
+    justify-content: right;
+    margin-right: 2rem;
+    gap: 2rem;
     width: 100%;
     cursor: pointer;
-    color: blue;
+    color: rgb(234, 233, 233);
     list-style: none;
 }
 
 .nav-bar-item:hover {
-    color: blueviolet;
+    color: rgb(160, 82, 234);
+}
+
+.Logo {
+    height: 5rem;
+    margin: 4rem;
+}
+
+.Logo:hover{
+    transform: scale(1.1);    
 }

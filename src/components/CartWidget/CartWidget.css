@@ -1,0 +1,30 @@
+.cart-widget {
+    display: flex;
+    margin-right: 3rem;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-icon {
+    font-size: 24px;
+    color: #efd1ff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+.cart-count {
+    background-color: rgb(177, 101, 248);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 3px 6px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
