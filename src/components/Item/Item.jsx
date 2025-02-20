@@ -1,5 +1,6 @@
 import './Item.css';
 
+
 function Item({ nombre, precio }) { //destructuring - props
 
 
