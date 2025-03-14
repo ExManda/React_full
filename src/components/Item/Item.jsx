@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
 import './Item.css';
 
 
-function Item({ nombre, precio }) { //destructuring - props
+
+function Item({ id, nombre, precio}) { //destructuring - props
 
 
     function agregarAlCarrito() {
@@ -13,9 +15,15 @@ function Item({ nombre, precio }) { //destructuring - props
 
 
         <div className="card">
-            <h2 className="card-name">{nombre || "No Disponible"}</h2>
-            <h3 className="card-precio">precio: ${precio || "Sin Precio"} </h3>
+            <h2> {nombre || "No Disponible"}</h2>
+            <h3> Precio: ${precio || "Sin Precio"} </h3>
             <button disabled={!nombre} className="card-btn" onClick={() => agregarAlCarrito()}>Agregar al carrito</button>
+            <Link to={`/detalle/${id}`}>
+                <button disabled={!nombre} className="card-btn">
+                    Ver detalle
+                </button>
+            </Link>
+
         </div>
 
     );
