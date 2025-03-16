@@ -1,0 +1,43 @@
+
+
+.error-container {
+    width: auto;
+    height: 34rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(191, 157, 236, 0.9);
+    color: rgb(108, 16, 194);
+
+
+}
+
+.error-title {
+    font-size: 6rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+}
+
+.error-message {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.back-link button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(108, 16, 194);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-link button:hover {
+    background-color: rgb(144, 54, 228);
+}

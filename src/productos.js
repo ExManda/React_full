@@ -2,7 +2,7 @@ export const productos = [
     {
         id: 1,
         nombre: "Star Nutrition",
-        precio: "100",
+        precio: "23",
         img: "",
         stock: 20,
         oferta: false,
@@ -13,9 +13,9 @@ export const productos = [
     {
         id: 2,
         nombre: "Bsn",
-        precio: "120",
+        precio: "37",
         img: "",
-        stock: 30,
+        stock: 20,
         oferta: true,
         descripcion: "Internacional",
         categoria: "Creatinas"
@@ -23,20 +23,20 @@ export const productos = [
 
     {
         id: 3,
-        nombre: "MuscleTech Platinum",
-        precio: "80",
+        nombre: "MuscleTech",
+        precio: "30",
         img: "",
-        stock: 50,
+        stock: 25,
         oferta: false,
         descripcion: "Internacional",
         categoria: "Proteinas"
-    
+
     },
 
     {
         id: 4,
         nombre: "On",
-        precio: "120",
+        precio: "29",
         img: "",
         stock: 10,
         oferta: false,
@@ -47,9 +47,9 @@ export const productos = [
     {
         id: 5,
         nombre: "Xtrenght",
-        precio: "20",
+        precio: "17",
         img: "",
-        stock: 50,
+        stock: 8,
         oferta: false,
         descripcion: "Nacional",
         categoria: "Creatinas"

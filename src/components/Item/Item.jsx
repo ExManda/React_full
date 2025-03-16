@@ -3,7 +3,8 @@ import './Item.css';
 
 
 
-function Item({ id, nombre, precio}) { //destructuring - props
+
+function Item({ id, nombre, precio }) { //destructuring - props
 
 
     function agregarAlCarrito() {

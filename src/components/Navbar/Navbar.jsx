@@ -8,7 +8,9 @@ function Navbar() {
     return (
         <header>
             <nav className="nav-bar">
+
                 <img src="./src/assets/Logo/Logo-Ozaru-h.png" alt="Logo Ozaru" className="Logo" />
+
                 <ul className="nav-bar-options">
                     <li className="nav-bar-item">
                         <Link to="/">
