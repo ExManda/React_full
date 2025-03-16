@@ -15,7 +15,7 @@ export const productos = [
         nombre: "Bsn",
         precio: "37",
         img: "",
-        stock: 20,
+        stock: 17,
         oferta: true,
         descripcion: "Internacional",
         categoria: "Creatinas"
@@ -26,7 +26,7 @@ export const productos = [
         nombre: "MuscleTech",
         precio: "30",
         img: "",
-        stock: 25,
+        stock: 23,
         oferta: false,
         descripcion: "Internacional",
         categoria: "Proteinas"
