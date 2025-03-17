@@ -18,10 +18,10 @@ function Item({ id, nombre, precio }) { //destructuring - props
         <div className="card">
             <h2> {nombre || "No Disponible"}</h2>
             <h3> Precio: ${precio || "Sin Precio"} </h3>
-            <button disabled={!nombre} className="card-btn" onClick={() => agregarAlCarrito()}>Agregar al carrito</button>
+           
             <Link to={`/detalle/${id}`}>
                 <button disabled={!nombre} className="card-btn">
-                    Ver detalle
+                    Comprar
                 </button>
             </Link>
 

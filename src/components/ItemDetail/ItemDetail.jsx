@@ -38,24 +38,7 @@ function ItemDetail() {
 
 
 
-    const sumar = () => {
-        if (cantidad < detalle.stock) {
-            setCantidad(cantidad + 1);
-        }
-    };
-
-
-
-
-    const restar = () => {
-        if (cantidad > 1) {
-            setCantidad(cantidad - 1);
-        }
-    };
-
-
-
-
+  
 
     const agregarAlCarrito = () => {
         console.log(`Agregaste ${cantidad} unidades de: ${detalle.nombre}`);
@@ -72,15 +55,6 @@ function ItemDetail() {
             {detalle.oferta && <p><b>PRODUCTO EN OFERTA</b></p>}
 
 
-
-
-
-            {/* CONTADOR */}
-            <div className="contador">
-                <button onClick={restar} disabled={cantidad === 1}>-</button>
-                <span>{cantidad}</span>
-                <button onClick={sumar} disabled={cantidad >= detalle.stock}>+</button>
-            </div>
 
 
 
