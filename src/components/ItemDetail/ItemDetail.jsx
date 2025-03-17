@@ -38,10 +38,28 @@ function ItemDetail() {
 
 
 
-  
+
+
+    const incrementarCantidad = () => {
+        if (cantidad < detalle.stock) {
+            setCantidad(cantidad + 1);
+        }
+    };
+
+    const reducirCantidad = () => {
+        if (cantidad > 1) {
+            setCantidad(cantidad - 1);
+        }
+    };
+
+
+
+
 
     const agregarAlCarrito = () => {
-        console.log(`Agregaste ${cantidad} unidades de: ${detalle.nombre}`);
+        if (detalle.stock > 0) {
+            console.log(`Agregaste ${cantidad} unidades de: ${detalle.nombre}`);
+        }
     };
 
     return (
@@ -55,8 +73,11 @@ function ItemDetail() {
             {detalle.oferta && <p><b>PRODUCTO EN OFERTA</b></p>}
 
 
-
-
+            <div className="cantidad-control">
+                <button onClick={reducirCantidad} disabled={cantidad <= 1}>-</button>
+                <span>{cantidad}</span>
+                <button onClick={incrementarCantidad} disabled={cantidad >= detalle.stock}>+</button>
+            </div>
 
 
             <button disabled={detalle.stock === 0} className="card-detail-btn" onClick={agregarAlCarrito}>
