@@ -17,6 +17,15 @@ function ItemListContainer() {
     const [error, setError] = useState(false);
     const { categoria } = useParams();
 
+
+
+    // const [carrito, setCarrito] = useState([])
+    // const agregarAlCarrito = (producto) => {
+    //     setCarrito([...carrito, producto]);
+    // };
+
+
+
     useEffect(() => {
         setLoading(true);
         setError(false);
@@ -61,7 +70,7 @@ function ItemListContainer() {
                     loading ? <Loader /> : (
                         misProductos.map(el => {
                             return (
-                                <Item key={el.id} id={el.id} nombre={el.nombre} precio={el.precio} />
+                                <Item key={el.id} id={el.id} nombre={el.nombre} precio={el.precio}/>
                             );
                         })
                     )

@@ -4,13 +4,20 @@ import { useEffect, useState } from 'react';
 import { fetchData } from '../../fetchData';
 import Loader from '../Loader/Loader';
 import Error404 from '../Error404/Error404';
+import { useAppContext } from '../../context/context';
+import Contador from '../Contador/Contador';
 
 function ItemDetail() {
     const { id } = useParams();
     const [detalle, setDetalle] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
-    const [cantidad, setCantidad] = useState(1);
+    const { agregarAlCarrito, contador } = useAppContext();
+
+
+
+
+
 
     useEffect(() => {
         setLoading(true);
@@ -39,48 +46,31 @@ function ItemDetail() {
 
 
 
-
-    const incrementarCantidad = () => {
-        if (cantidad < detalle.stock) {
-            setCantidad(cantidad + 1);
-        }
-    };
-
-    const reducirCantidad = () => {
-        if (cantidad > 1) {
-            setCantidad(cantidad - 1);
-        }
-    };
-
-
-
-
-
-    const agregarAlCarrito = () => {
-        if (detalle.stock > 0) {
-            console.log(`Agregaste ${cantidad} unidades de: ${detalle.nombre}`);
-        }
-    };
-
     return (
         <div className="card-detail">
             <h2>{detalle.nombre || "NO DISPONIBLE"}</h2>
             <h3>Precio: ${detalle.precio || "SIN PRECIO"}</h3>
             <p>Descripción: {detalle.descripcion}</p>
 
-            {detalle.stock > 0 ? <p>Quedan {detalle.stock} unidades</p> : <p>Producto agotado!</p>}
 
-            {detalle.oferta && <p><b>PRODUCTO EN OFERTA</b></p>}
+            {
+                detalle.oferta && <p><b>PRODUCTO EN OFERTA</b></p>
+            }
+            {
+                detalle.stock > 0 ?
+                    <>
+
+                        <p>Quedan {detalle.stock} unidades</p>
+                        <Contador stock={detalle.stock} />
+
+                    </>
+                    : <p>Producto agotado!</p>
 
 
-            <div className="cantidad-control">
-                <button onClick={reducirCantidad} disabled={cantidad <= 1}>-</button>
-                <span>{cantidad}</span>
-                <button onClick={incrementarCantidad} disabled={cantidad >= detalle.stock}>+</button>
-            </div>
+            }
 
 
-            <button disabled={detalle.stock === 0} className="card-detail-btn" onClick={agregarAlCarrito}>
+            <button disabled={detalle.stock === 0} className="card-detail-btn" onClick={() => agregarAlCarrito({ id: detalle.id, nombre: detalle.nombre, precio: detalle.precio, cantidad: contador })} >
                 Agregar {cantidad} al carrito
             </button>
 
