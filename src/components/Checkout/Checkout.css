@@ -92,7 +92,7 @@
 }
 
 .checkout-success h2 {
-    margin-bottom: 1rem; /* 💡 separación entre el título y el ID */
+    margin-bottom: 1rem;
     font-weight: 600;
 }
 

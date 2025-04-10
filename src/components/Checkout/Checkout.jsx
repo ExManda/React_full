@@ -46,12 +46,12 @@ function Checkout() {
         };
 
         try {
-            // 1. Guardar la orden
+
             const ordenesRef = collection(db, "ordenes");
             const docRef = await addDoc(ordenesRef, orden);
             setOrdenId(docRef.id);
 
-            // 2. Actualizar stock (campo correcto = stock)
+
             for (const prod of carrito) {
                 const prodRef = doc(db, "productos", prod.id);
                 await updateDoc(prodRef, {

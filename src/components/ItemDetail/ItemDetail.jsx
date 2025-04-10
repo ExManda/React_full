@@ -48,7 +48,7 @@ function ItemDetail() {
 
   const handleAgregar = () => {
     if (contador > detalle.stock) {
-      alert("❗ No hay suficiente stock disponible.");
+      alert(" No hay suficiente stock disponible.");
       return;
     }
 
@@ -70,7 +70,7 @@ function ItemDetail() {
       <h3>Precio: ${detalle.precio}</h3>
       <p>{detalle.descripcion}</p>
 
-      {detalle.oferta && <p className="oferta">🔥 Producto en oferta</p>}
+      {detalle.oferta && <p className="oferta"> Producto en oferta</p>}
 
       {detalle.stock > 0 ? (
         <>

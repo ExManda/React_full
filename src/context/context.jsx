@@ -13,7 +13,7 @@ export const ContextProvider = ({ children }) => {
             const totalDeseado = productoEnCarrito.cantidad + producto.cantidad;
 
             if (totalDeseado > producto.stock) {
-                alert("❗ No podés agregar más unidades que las disponibles en stock.");
+                alert(" No podés agregar más unidades que las disponibles en stock.");
                 return;
             }
 
@@ -25,7 +25,7 @@ export const ContextProvider = ({ children }) => {
             setCarrito(newCarrito);
         } else {
             if (producto.cantidad > producto.stock) {
-                alert("❗ No hay suficiente stock disponible.");
+                alert(" No hay suficiente stock disponible.");
                 return;
             }
 
