@@ -12,8 +12,8 @@ function Error404() {
             <h1 className="error-title">404</h1>
             <p className="error-message">Producto no encontrado, lo sentimos.</p>
 
-            <Link to="/" className="back-link">
-                <button>Volver al inicio</button>
+            <Link to="/">
+                <button className="error-button" aria-label="Volver al inicio">Volver al inicio</button>
             </Link>
         </div>
     );

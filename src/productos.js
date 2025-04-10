@@ -1,9 +1,9 @@
-export const productos = [
+export let productos = [
     {
-        id: 1,
+      //  id: 1,
         nombre: "Star Nutrition",
         precio: "23",
-        img: "",
+        img: "https://res.cloudinary.com/dgdjhtrot/image/upload/v1744119784/star-nutrition-proteina_pasaqj.png",
         stock: 20,
         oferta: false,
         descripcion: "Nacional",
@@ -11,10 +11,10 @@ export const productos = [
     },
 
     {
-        id: 2,
+        //      id: 2,
         nombre: "Bsn",
         precio: "37",
-        img: "",
+        img: "https://res.cloudinary.com/dgdjhtrot/image/upload/v1744132757/creatina-bsn_p1zv4k.png",
         stock: 17,
         oferta: true,
         descripcion: "Internacional",
@@ -22,10 +22,10 @@ export const productos = [
     },
 
     {
-        id: 3,
+        //       id: 3,
         nombre: "MuscleTech",
         precio: "30",
-        img: "",
+        img: "https://res.cloudinary.com/dgdjhtrot/image/upload/v1744132757/proteina-Xtrenght_gdvy1f.png",
         stock: 23,
         oferta: false,
         descripcion: "Internacional",
@@ -34,10 +34,10 @@ export const productos = [
     },
 
     {
-        id: 4,
+        //      id: 4,
         nombre: "On",
         precio: "29",
-        img: "",
+        img: "https://res.cloudinary.com/dgdjhtrot/image/upload/v1744132757/creatine-on_g2gv48.png",
         stock: 10,
         oferta: false,
         descripcion: "Internacional",
@@ -45,10 +45,10 @@ export const productos = [
     },
 
     {
-        id: 5,
+        //       id: 5,
         nombre: "Xtrenght",
         precio: "17",
-        img: "",
+        img: "https://res.cloudinary.com/dgdjhtrot/image/upload/v1744132757/creatina-strenght_vs1gky.png",
         stock: 8,
         oferta: false,
         descripcion: "Nacional",

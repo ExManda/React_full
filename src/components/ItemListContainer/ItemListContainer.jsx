@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { fetchData } from '../../fetchData';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from '../../firebaseConfig';
 import Item from '../Item/Item';
 import Loader from '../Loader/Loader';
 import './ItemListContainer.css';
@@ -9,9 +10,7 @@ import { useParams } from 'react-router-dom';
 
 
 
-
 function ItemListContainer() {
-    const [todosLosProductos, setTodosLosProductos] = useState([]);
     const [misProductos, setMisProductos] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
@@ -19,64 +18,56 @@ function ItemListContainer() {
 
 
 
-    // const [carrito, setCarrito] = useState([])
-    // const agregarAlCarrito = (producto) => {
-    //     setCarrito([...carrito, producto]);
-    // };
-// sdfdsfdsfdsf
 
 
+    
     useEffect(() => {
-        setLoading(true);
-        setError(false);
+        const cargarProductos = async () => {
+            setLoading(true);
+            setError(false);
 
-        fetchData()
-            .then(response => {
-                setTodosLosProductos(response);
+            try {
+                const productosRef = collection(db, 'productos');
+                let q = productosRef;
 
+                if (categoria) {
+                    q = query(productosRef, where("categoria", "==", categoria));
+                }
 
-                const productosFiltrados = categoria
-                    ? response.filter(el =>
-                        el.categoria.toLowerCase() === categoria.toLowerCase()
-                    )
-                    : response;
+                const querySnapshot = await getDocs(q);
+                const productos = querySnapshot.docs.map(doc => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
 
-
-                if (productosFiltrados.length === 0) {
+                if (productos.length === 0) {
                     setError(true);
                 }
 
-                setMisProductos(productosFiltrados);
-            })
-            .catch(err => {
+                setMisProductos(productos);
+            } catch (err) {
                 console.error('Error al cargar productos:', err);
                 setError(true);
-            })
-            .finally(() => setLoading(false));
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        cargarProductos();
     }, [categoria]);
 
-
-
-
-
     if (error) {
-        return <p>404: Se produjo un error.</p>;
+        return <p>404: No se encontraron productos.</p>;
     }
 
     return (
-        <>
-            <section className="container-cards">
-                {
-                    loading ? <Loader /> : (
-                        misProductos.map(el => {
-                            return (
-                                <Item key={el.id} id={el.id} nombre={el.nombre} precio={el.precio}/>
-                            );
-                        })
-                    )
-                }
-            </section>
-        </>
+        <section className="container-cards">
+            {loading ? <Loader /> : (
+                misProductos.map(prod => (
+                    <Item key={prod.id} id={prod.id} nombre={prod.nombre} precio={prod.precio} img={prod.img} categoria={prod.categoria} />
+                ))
+            )}
+        </section>
     );
 }
 

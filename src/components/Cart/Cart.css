@@ -1,0 +1,91 @@
+.cart-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fefefe;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fafafa;
+    flex-wrap: wrap;
+}
+
+.cart-item-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;    
+    object-position: center;
+    flex-shrink: 0;
+}
+
+
+.cart-item p {
+    margin: 0.3rem 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.cart-item button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item button:hover {
+    background-color: #c82333;
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.cart-actions button,
+.cart-actions a button {
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: white;
+    background-color:#9b4de4;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-actions button:hover,
+.cart-actions a button:hover {
+    background-color: #9b4de4;
+}
+
+.cart-total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #222;
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.empty-cart {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #555;
+    margin-top: 4rem;
+}

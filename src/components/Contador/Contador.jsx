@@ -1,5 +1,9 @@
 import './Contador.css';
 import { useAppContext } from '../../context/context';
+
+
+
+
 function Contador({stock}) {
 
     const {contador, setContador} = useAppContext();

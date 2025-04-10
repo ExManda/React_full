@@ -11,29 +11,26 @@ import Cart from './components/Cart/Cart';
 
 
 function App() {
-
   return (
-
     <ContextProvider>
-
-
       <BrowserRouter>
         <Navbar />
 
-        <Routes>
-          <Route path="/" element={<ItemListContainer />} />
-          <Route path="/categoria/:categoria" element={<ItemListContainer />} />
-          <Route path="/detalle/:id" element={<ItemDetail />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="*" element={<Error404 />} />
+        <main>
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/categoria/:categoria" element={<ItemListContainer />} />
+            <Route path="/detalle/:id" element={<ItemDetail />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="*" element={<Error404 />} />
+          </Routes>
+        </main>
 
-        </Routes>
       </BrowserRouter>
-
     </ContextProvider>
-
   );
-};
+}
+
 
 export default App;

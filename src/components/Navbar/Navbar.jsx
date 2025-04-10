@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
 import './Navbar.css';
-
+import logo from '../../assets/Logo/Logo-Ozaru-h.png';
 
 
 
@@ -11,8 +11,9 @@ function Navbar() {
     return (
         <header>
             <nav className="nav-bar">
-
-                <img src="./src/assets/Logo/Logo-Ozaru-h.png" alt="Logo Ozaru" className="Logo" />
+                <Link to="/" className="logo-link">
+                    <img src={logo} alt="Logo Ozaru" className="Logo" />
+                </Link>
 
                 <ul className="nav-bar-options">
                     <li className="nav-bar-item">
@@ -31,7 +32,7 @@ function Navbar() {
                         </Link>
                     </li>
                 </ul>
-                <CartWidget/>
+                <CartWidget />
             </nav>
         </header>
     );
