@@ -28,7 +28,7 @@ function Checkout() {
     const crearOrden = async (e) => {
         e.preventDefault();
 
-        console.log("🧪 Carrito al momento de crear la orden:", carrito);
+        console.log(" Carrito al momento de crear la orden:", carrito);
 
         const total = carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0);
 

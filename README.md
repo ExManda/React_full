@@ -1,6 +1,6 @@
 # 🐵 Ozaru - Suplementos Deportivos
 
-**Ozaru** es un ecommerce enfocado en la venta de suplementos deportivos diseñados para optimizar el rendimiento en el entrenamiento. Dentro de la tienda se pueden encontrar productos como **proteínas** y **creatinas**, provenientes de marcas nacionales e internacionales.
+**Ozaru** se trata de un ecommerce, enfocado en la venta de suplementos deportivos, diseñados para optimizar el rendimiento en el entrenamiento. Dentro de la tienda se pueden encontrar productos como **proteínas** y **creatinas**, provenientes de marcas nacionales e internacionales.
 
 ## 🚀 Tecnologías Utilizadas
 
